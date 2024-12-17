@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatGPT Text Helper Settings</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    label {
+      font-size: 14px;
+      color: #333;
+    }
+    
+    input {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    button {
+      background: #10a37f;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    button:hover {
+      background: #0e906f;
+    }
+    
+    .help-text {
+      font-size: 12px;
+      color: #666;
+      margin-top: 12px;
+    }
+    
+    .status {
+      font-size: 14px;
+      margin-top: 8px;
+      text-align: center;
+    }
+    
+    .status.success {
+      color: #10a37f;
+    }
+    
+    .status.error {
+      color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="input-group">
+      <label for="apiKey">OpenAI API Key</label>
+      <input type="password" id="apiKey" placeholder="sk-..." />
+    </div>
+    <button id="saveButton">Save API Key</button>
+    <div id="status" class="status"></div>
+    <p class="help-text">
+      To get your API key:
+      <ol>
+        <li>Go to <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI API Keys</a></li>
+        <li>Sign in or create an account</li>
+        <li>Click "Create new secret key"</li>
+        <li>Copy and paste the key here</li>
+      </ol>
+    </p>
+  </div>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
