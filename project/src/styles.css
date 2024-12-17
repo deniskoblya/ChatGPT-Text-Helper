@@ -1,0 +1,105 @@
+/* Wrapper for textarea and button */
+.gpt-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* ChatGPT button */
+.gpt-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #10a37f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.gpt-button:hover {
+  background: #0e906f;
+}
+
+/* Modal styles */
+.gpt-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gpt-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.gpt-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gpt-close:hover {
+  color: black;
+}
+
+.gpt-prompt-input {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.gpt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gpt-submit {
+  background: #10a37f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.gpt-submit:hover {
+  background: #0e906f;
+}
+
+.gpt-submit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.gpt-loading {
+  margin-top: 10px;
+  color: #666;
+}
